@@ -7,10 +7,11 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import rabbitmq.callback.MsgSendConfirmCallBack;
 import rabbitmq.consumer.MessageConsumer;
 import rabbitmq.consumer.MessageConsumer2;
-
+@Configuration
 public class ConnectionFactoryConfigure {
     @Value("${spring.rabbitmq.host}")
     public String host;
